@@ -29,8 +29,6 @@ Shonenmagazine and ichicomi downloader script to download + deobfuscation images
    - The first time you click download button, make sure to select `always allow` button.
    
 2. For Shonenmagazine website only (Only works on Chrome):
-   - Install Always active Window - Always Visible extension ([click here](https://chromewebstore.google.com/detail/always-active-window-alwa/ehllkhjndgnlokhomdlhgbineffifcbj))
-      - Go to https://pocket.shonenmagazine.com/ -> click `Always active Window - Always Visible` extension to active it (blue rectangle means it's activated for this website).
    - Run chrome with Disabled security flag:
       - Windows:
         - Clone Chrome shortcut on desktop, change it name to `Unsafe Google Chrome`
@@ -40,7 +38,10 @@ Shonenmagazine and ichicomi downloader script to download + deobfuscation images
        - Linux:
          - Start Unsafe Google Chrome: `google-chrome-stable --disable-web-security --user-data-dir="$HOME/.config/google-chrome-unsafe"`
          - `google-chrome` or `google-chrome-stable` depends on your distro.
-    
+   - Install Always active Window - Always Visible extension ([click here](https://chromewebstore.google.com/detail/always-active-window-alwa/ehllkhjndgnlokhomdlhgbineffifcbj))
+      - Go to https://pocket.shonenmagazine.com/ -> click `Always active Window - Always Visible` extension to active it (blue rectangle means it's activated for this website).
+    - Next, Do the same steps like `1. Tampermonkey and user script`
+
 ### Usage
 
 - Open any chapter of the manga in the browser: For example: https://pocket.shonenmagazine.com/episode/3270375685457628827
