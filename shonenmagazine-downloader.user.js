@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name         Download Shonen Magazine, ichicomi manga as ZIP
 // @namespace    http://tampermonkey.net/
-// @version      4.1
+// @version      4.2
 // @description  Intercept fetch, collect images, and download them all as a zip with proper filenames from pocket.shonenmagazine.com and ichicomi.com
 // @author       boydaihungst
 // @match        https://pocket.shonenmagazine.com/title/*/episode/*
 // @match        https://ichicomi.com/episode/*
 // @match        https://comic-days.com/episode/*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jszip/3.9.1/jszip.min.js
-// @updateURL    https://github.com/boydaihungst/Shonenmagazine-ichicomi-comic-days-downloader/raw/refs/heads/master/shonenmagazine-downloader.user.js
-// @downloadURL  https://github.com/boydaihungst/Shonenmagazine-ichicomi-comic-days-downloader/raw/refs/heads/master/shonenmagazine-downloader.user.js
+// @updateURL    https://raw.githubusercontent.com/boydaihungst/Shonenmagazine-ichicomi-comic-days-downloader/refs/heads/master/shonenmagazine-downloader.user.js
+// @downloadURL  https://raw.githubusercontent.com/boydaihungst/Shonenmagazine-ichicomi-comic-days-downloader/refs/heads/master/shonenmagazine-downloader.user.js
 // @grant        unsafeWindow
 // @run-at       document-start
 // @grant        GM_xmlhttpRequest
