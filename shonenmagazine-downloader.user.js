@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Download Shonen Magazine, ichicomi manga as ZIP
 // @namespace    http://tampermonkey.net/
-// @version      3.4
+// @version      4.0
 // @description  Intercept fetch, collect images, and download them all as a zip with proper filenames from pocket.shonenmagazine.com and ichicomi.com
 // @author       boydaihungst
 // @match        https://pocket.shonenmagazine.com/title/*/episode/*
 // @match        https://ichicomi.com/episode/*
+// @match        https://comic-days.com/episode/*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jszip/3.9.1/jszip.min.js
 // @updateURL    https://raw.githubusercontent.com/boydaihungst/shonenmagazine-downloader/refs/heads/master/shonenmagazine-downloader.user.js
 // @downloadURL  https://raw.githubusercontent.com/boydaihungst/shonenmagazine-downloader/refs/heads/master/shonenmagazine-downloader.user.js
@@ -196,12 +197,11 @@
     }
 
     let elementListening;
-    function refreshDownloadBtnIchicomi() {
+    function refreshDownloadBtnIchicomiComicdays() {
         if (elementListening) {
             clearInterval(elementListening);
         }
         elementListening = waitForElement("#episode-json", (element) => {
-            const targetString = "cdn-img.ichicomi.com/public/page";
             const matchedUrls = new Set();
             let chapter_title;
 
@@ -293,7 +293,9 @@
             }`.replace(/[<>:"/\\|?*]/g, "-");
                 for (let i = 0; i < pages.length; i++) {
                     const img = pages[i];
-                    if (img.type === "main" && img.src.includes(targetString)) {
+                    const regex_img_src = /cdn-img\..*\/public\/page/;
+
+                    if (img.type === "main" && regex_img_src.test(img.src)) {
                         matchedUrls.add(img);
                     }
                 }
@@ -420,11 +422,11 @@
                 console.error(`Error reading response from ${url}:`, err);
             }
         }
-        if (typeof url === "string" && url.match(/.*ichicomi\.com\/episode.*/)) {
-            refreshDownloadBtnIchicomi();
+        if (typeof url === "string" && (url.match(/.*ichicomi\.com\/episode.*/) || url.match(/.*comic-days\.com\/episode.*/))) {
+            refreshDownloadBtnIchicomiComicdays();
         }
         return response;
     };
 
-    refreshDownloadBtnIchicomi();
+    refreshDownloadBtnIchicomiComicdays();
 })();
