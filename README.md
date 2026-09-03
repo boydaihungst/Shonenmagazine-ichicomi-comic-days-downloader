@@ -16,19 +16,9 @@ Shonenmagazine. ichicomi and comic-days downloader script to download + deobfusc
 <b>Installation Video</b>: 
  - Windows: https://youtu.be/_yQYudOzpFg
  - Linux: https://youtu.be/2JdW3b53xFg
-
-1. Tampermonkey and user script
-   - Download Tampermonkey for your browser from [here](https://www.tampermonkey.net/). 
-   - Chrome users also need
-      - Enable developer mode in your chrome browser https://www.tampermonkey.net/faq.php#Q209
-      - Allow `Allow User Scripts`: To go to Settings > Extensions > Manage Extensions > Click `Details` button under `Tampermonkey` extension card > Switch `Allow User Scripts` on.
-      - Restart chrome after that.
-   - Firefox doesn't need to enable developer mode.
-   - Click on this link, and then click on the "Install" button to install user script:
-     [shonenmagazine-downloader.user.js](https://raw.githubusercontent.com/boydaihungst/shonenmagazine-downloader/refs/heads/master/shonenmagazine-downloader.user.js)
-   - The first time you click download button, make sure to select `always allow` or `permanently allow` button.
-   
-2. For Shonenmagazine website only (Only works on Chrome):
+ 
+1. For Shonenmagazine website only (Only works on Chrome):
+   - Skip this step if you only want to download from ichicomi and comic-days.
    - Run chrome with Disabled security flag:
       - Windows:
         - Clone Chrome shortcut on desktop, change it name to `Unsafe Google Chrome`
@@ -40,12 +30,23 @@ Shonenmagazine. ichicomi and comic-days downloader script to download + deobfusc
          - `google-chrome` or `google-chrome-stable` depends on your distro.
    - Install Always active Window - Always Visible extension ([click here](https://chromewebstore.google.com/detail/always-active-window-alwa/ehllkhjndgnlokhomdlhgbineffifcbj))
       - Go to https://pocket.shonenmagazine.com/ -> click `Always active Window - Always Visible` extension to active it (blue rectangle means it's activated for this website).
-    - Next, Do the same steps like `1. Tampermonkey and user script`
+    - Next, Do the same steps like `2. Tampermonkey and user script`
 
+2. Tampermonkey and user script
+   - Download Tampermonkey for your browser from [here](https://www.tampermonkey.net/). 
+   - Chrome users also need
+      - Enable developer mode in your chrome browser https://www.tampermonkey.net/faq.php#Q209
+      - Allow `Allow User Scripts`: To go to Settings > Extensions > Manage Extensions > Click `Details` button under `Tampermonkey` extension card > Switch `Allow User Scripts` on.
+      - Restart chrome after that.
+   - Firefox doesn't need to enable developer mode.
+   - Click on this link, and then click on the "Install" button to install user script:
+     [shonenmagazine-downloader.user.js](https://raw.githubusercontent.com/boydaihungst/shonenmagazine-downloader/refs/heads/master/shonenmagazine-downloader.user.js)
+   - The first time you click download button, make sure to select `always allow` or `permanently allow` button.
+   
 ### Usage
 
 - Open any chapter of the manga in the browser: For example: https://pocket.shonenmagazine.com/episode/3270375685457628827
-- Click on the `Download All Images as ZIP` button in the top right corner of the page
+- Click on the `Download All Images as ZIP` button in the bottom-right corner of the page
 - If it asks for permission, click on the `always allow` or `permanently allow` button
 - Wait for the download to complete, then extract the ZIP file.
 
