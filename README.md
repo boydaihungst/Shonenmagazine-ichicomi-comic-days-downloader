@@ -1,6 +1,6 @@
-# Shonenmagazine-ichicomi-downloader
+# Shonenmagazine-ichicomi-comic-days-downloader
 
-Shonenmagazine and ichicomi downloader script to download + deobfuscation images for manga from shonenmagazine.com and ichicomi.com
+Shonenmagazine. ichicomi and comic-days downloader script to download + deobfuscation images for manga from shonenmagazine.com, ichicomi.com and comic-days.com
 
 ## Installation
 
@@ -10,7 +10,7 @@ Shonenmagazine and ichicomi downloader script to download + deobfuscation images
 - <b>Shonenmagazine only works on Chrome (or chrome based browser) and also needs to install:</b> 
   - Always active Window - Always Visible: https://chromewebstore.google.com/detail/always-active-window-alwa/ehllkhjndgnlokhomdlhgbineffifcbj
   - Run chrome with Disabled security flag to be able to save images from protected canvas.
-- ichicomi works on both Chrome and Firefox based browsers.
+- ichicomi, comic-days works on both Chrome and Firefox based browsers.
 ### Installation
 
 <b>Installation Video</b>: 
@@ -26,7 +26,7 @@ Shonenmagazine and ichicomi downloader script to download + deobfuscation images
    - Firefox doesn't need to enable developer mode.
    - Click on this link, and then click on the "Install" button to install user script:
      [shonenmagazine-downloader.user.js](https://raw.githubusercontent.com/boydaihungst/shonenmagazine-downloader/refs/heads/master/shonenmagazine-downloader.user.js)
-   - The first time you click download button, make sure to select `always allow` button.
+   - The first time you click download button, make sure to select `always allow` or `permanently allow` button.
    
 2. For Shonenmagazine website only (Only works on Chrome):
    - Run chrome with Disabled security flag:
@@ -45,8 +45,8 @@ Shonenmagazine and ichicomi downloader script to download + deobfuscation images
 ### Usage
 
 - Open any chapter of the manga in the browser: For example: https://pocket.shonenmagazine.com/episode/3270375685457628827
-- Click on the "Download All Images as ZIP" button in the top right corner of the page
-- If it asks for permission, click on the "always allow" button
+- Click on the `Download All Images as ZIP` button in the top right corner of the page
+- If it asks for permission, click on the `always allow` or `permanently allow` button
 - Wait for the download to complete, then extract the ZIP file.
 
 ## License
